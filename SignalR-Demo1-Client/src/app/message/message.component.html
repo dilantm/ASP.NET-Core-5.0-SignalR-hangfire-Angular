@@ -1,0 +1,23 @@
+<h1>Messages : {{tempMessage}}</h1>
+<p>This is the messages that is coming from server via signalR.</p>
+<!-- <div *ngIf="showimage">
+    Click on bell to show all {{signaldata.length}} messages <img src="assets/notification.png" height="30px" width="30px" (click)="showMessage()">
+</div>
+    <h2 *ngFor="let i of signaldata">
+        {{i.information}}
+    </h2> -->
+
+    <table >
+        <thead >
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let field of signaldata" >
+            <td >{{field.type}}</td>
+            <td>{{field.information}}</td>
+          </tr>
+        </tbody>
+      </table>
